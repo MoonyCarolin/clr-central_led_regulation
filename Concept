@@ -1,0 +1,8 @@
+# clr-central_led_regulation
+
+
+GUI: https://docs.python.org/3/library/tkinter.html#tkinter-modules
+WiFi: 
+- https://pypi.python.org/pypi/python-wifi/0.6.1
+- https://pypi.python.org/pypi/PyRIC/0.1.6.3
+classes to generate datapoints
