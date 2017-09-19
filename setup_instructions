@@ -2,3 +2,4 @@ For seting up the nodemcu:
 Go to files and click on the preference in the Arduino IDE.
 Copy the below code in the Additional boards Manager.
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
+Go to Tools and board, and then select board Manager.
