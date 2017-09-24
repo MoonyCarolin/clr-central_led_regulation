@@ -1,24 +1,36 @@
 import tkinter as tk
 import tkFontChooser as tkfont
 import tkcolorpicker
+from IPAdresses import *
 
 
-                                # #maintitle = tk.Font(family='Arial', size=16, weight='bold')
-                                # #def ccolorchooser():
-                                #
-                                #  #   return 0
-                                #
-                                # # class lamp:
-                                # #     def __init__(self, location, color):
-                                # #         self.location = location
-                                # #         self.color = None
-                                #
-                                #  #   def color(self):
-                                #
-                                #
-                                #
-                                # buttonbackground = None
-
+#  ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____
+# |____|   |____|   |____|   |____|   |____|   |____|   |____|   |____|   |____|   |____|   |____|   |____|
+#   101      201      301      401      501      601      701      801      901      100      111      121
+#  _                                                                                                     _
+# | | 102                                                                                          1201 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 202                                                                                          1202 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 302                                                                                          1203 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 402                                                                                          1204 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 502                                                                                          1205 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 602                                                                                          1206 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 702                                                                                          1207 | |
+# |_|                                                                                                   |_|
+#  _                                                                                                     _
+# | | 802                                                                                          1208 | |
+# |_|                                                                                                   |_|
 
 
 def function():
@@ -26,6 +38,7 @@ def function():
 
     if selection == 101:
         color = tkcolorpicker.askcolor()
+        # L101()
         rgbcolor = color[1]
         print(color)
 
@@ -68,15 +81,4 @@ tk.Radiobutton(root, variable = var, value = 1206, height=4, width=2, indicatoro
 tk.Radiobutton(root, variable = var, value = 1207, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=7, sticky=tk.E)
 tk.Radiobutton(root, variable = var, value = 1208, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=8, sticky=tk.E)
 
-mainloop()
-
-
-
-
-#root.maxsize(1000, 400)
-#root.geometry()
-#root.minsize(500,200)
-#root.configure()
-root.columnconfigure(1, weight=0)
-root.rowconfigure(1, weight=0)
-
+tk.mainloop()
