@@ -3,77 +3,80 @@ import tkFontChooser as tkfont
 import tkcolorpicker
 
 
-#maintitle = tk.Font(family='Arial', size=16, weight='bold')
-#def ccolorchooser():
+                                # #maintitle = tk.Font(family='Arial', size=16, weight='bold')
+                                # #def ccolorchooser():
+                                #
+                                #  #   return 0
+                                #
+                                # # class lamp:
+                                # #     def __init__(self, location, color):
+                                # #         self.location = location
+                                # #         self.color = None
+                                #
+                                #  #   def color(self):
+                                #
+                                #
+                                #
+                                # buttonbackground = None
 
- #   return 0
-
-# class lamp:
-#     def __init__(self, location, color):
-#         self.location = location
-#         self.color = None
-
- #   def color(self):
 
 
+def function():
+    selection = var.get()
 
-buttonbackground = None
+    if selection == 101:
+        color = tkcolorpicker.askcolor()
+        rgbcolor = color[1]
+        print(color)
+
+    if selection == 201:
+        color = tkcolorpicker.askcolor()
+        print(color)
 
 root = tk.Tk()
-
-
+var = tk.IntVar()
 root.title('CLR - Central LED Regulation')
 
 
-def getColor():
-    color = tkcolorpicker.askcolor()
-  #  print(color)
-    rgbcolor = color[1]
-    return rgbcolor
+tk.Radiobutton(root, variable = var, value = 101, height=1, width=10, indicatoron=0, command = function).grid(column=1, row=1)
+tk.Radiobutton(root, variable = var, value = 201, height=1, width=10, indicatoron=0, command = function).grid(column=2, row=1)
+tk.Radiobutton(root, variable = var, value = 301, height=1, width=10, indicatoron=0, command = function).grid(column=3, row=1)
+tk.Radiobutton(root, variable = var, value = 401, height=1, width=10, indicatoron=0, command = function).grid(column=4, row=1)
+tk.Radiobutton(root, variable = var, value = 501, height=1, width=10, indicatoron=0, command = function).grid(column=5, row=1)
+tk.Radiobutton(root, variable = var, value = 601, height=1, width=10, indicatoron=0, command = function).grid(column=6, row=1)
+tk.Radiobutton(root, variable = var, value = 701, height=1, width=10, indicatoron=0, command = function).grid(column=7, row=1)
+tk.Radiobutton(root, variable = var, value = 801, height=1, width=10, indicatoron=0, command = function).grid(column=8, row=1)
+tk.Radiobutton(root, variable = var, value = 901, height=1, width=10, indicatoron=0, command = function).grid(column=9, row=1)
+tk.Radiobutton(root, variable = var, value = 1001, height=1, width=10, indicatoron=0, command = function).grid(column=10, row=1)
+tk.Radiobutton(root, variable = var, value = 1101, height=1, width=10, indicatoron=0, command = function).grid(column=11, row=1)
+tk.Radiobutton(root, variable = var, value = 1201, height=1, width=10, indicatoron=0, command = function).grid(column=12, row=1)
 
 
+tk.Radiobutton(root, variable = var, value = 102, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=2, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 103, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=3, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 104, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=4, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 105, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=5, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 106, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=6, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 107, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=7, sticky=tk.W)
+tk.Radiobutton(root, variable = var, value = 108, height=4, width=2, indicatoron=0, command = function).grid(column=1, row=8, sticky=tk.W)
 
-def horizontalbutton(location, background='#fffff'):
-   # background = getColor()
-    return tk.Radiobutton(location, background=background, height=1, width=10, indicatoron=0, command=getColor)
+tk.Radiobutton(root, variable = var, value = 1202, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=2, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1203, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=3, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1204, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=4, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1205, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=5, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1206, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=6, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1207, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=7, sticky=tk.E)
+tk.Radiobutton(root, variable = var, value = 1208, height=4, width=2, indicatoron=0, command = function).grid(column=12, row=8, sticky=tk.E)
+
+mainloop()
 
 
-def verticalbutton(location, background='#ffffff'):
-    return tk.Button(location, background=background, height=4, width=2, command=getColor)
 
 
 #root.maxsize(1000, 400)
 #root.geometry()
-root.minsize(500,200)
+#root.minsize(500,200)
 #root.configure()
 root.columnconfigure(1, weight=0)
 root.rowconfigure(1, weight=0)
-
-# w = verticalbutton(root, background=buttonbackground)
-# y = horizontalbutton(root, background='#0ff')
-# v = horizontalbutton(root, background='#0f0')
-
-
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=0)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=1)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=2)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=3)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=4)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=5)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=6)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=7)
-horizontalbutton(root, background=buttonbackground).grid(row=0, column=8)
-
-verticalbutton(root, background=buttonbackground).grid(row=1, column=0, sticky=tk.W)
-verticalbutton(root, background=buttonbackground).grid(row=2, column=0, sticky=tk.W)
-verticalbutton(root, background=buttonbackground).grid(row=3, column=0, sticky=tk.W)
-verticalbutton(root, background=buttonbackground).grid(row=4, column=0, sticky=tk.W)
-
-verticalbutton(root, background=buttonbackground).grid(row=1, column=8, sticky=tk.E)
-verticalbutton(root, background=buttonbackground).grid(row=2, column=8, sticky=tk.E)
-verticalbutton(root, background=buttonbackground).grid(row=3, column=8, sticky=tk.E)
-verticalbutton(root, background=buttonbackground).grid(row=4, column=8, sticky=tk.E)
-
-
-root.mainloop()
 
