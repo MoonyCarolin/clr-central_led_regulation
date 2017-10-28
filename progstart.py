@@ -15,14 +15,22 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+' '+str(msg.payload))
 
+
 def on_publish(client, userdata, mid):
     print('mid: '+str(mid))
 
 
 def datageneration(identifier):
     color = tkcolorpicker.askcolor()
-    print(identifier, color, 'LED/' + str(identifier))
-    (rc, mid) = client.publish('LED/' + str(identifier), payload=str(color[1]), qos=1)
+  #  print(identifier, color, 'LED/' + str(identifier))
+   # print(color[1])
+    hexa = str(color[1])
+  #  print(hexa)
+   # print(hexa[1:])
+  #  (rc, mid) = client.publish('LED/' + str(identifier), payload=str(color[1]), qos=1)
+    (rc, mid) = client.publish('LED/' + str(identifier), payload=str(hexa[1:]), qos=1)
+
+
 
 def function():
     selection = var.get()
@@ -150,7 +158,7 @@ client.username_pw_set('$username', '$password')
 
 client.on_connect = on_connect
 
-client.connect('$serveradresse', 1883, 60)
+client.connect('$serveradress', 1883, 60)
 
 gui_buttons()
 
