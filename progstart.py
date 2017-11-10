@@ -25,11 +25,14 @@ def datageneration(identifier):
   #  print(identifier, color, 'LED/' + str(identifier))
    # print(color[1])
     hexa = str(color[1])
-  #  print(hexa)
+    print(hexa)
    # print(hexa[1:])
   #  (rc, mid) = client.publish('LED/' + str(identifier), payload=str(color[1]), qos=1)
     (rc, mid) = client.publish('LED/' + str(identifier), payload=str(hexa[1:]), qos=1)
-    coloring(identifier, hexa)
+    try:
+        coloring(identifier, hexa)
+    except:
+        coloring(identifier, '#FFFFFF')
 
 
 def coloring(identifier, hexa):
