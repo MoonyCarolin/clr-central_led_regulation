@@ -1,0 +1,5 @@
+{
+  "mode":"STA",
+  "ssid":"$ssid",
+  "pass":"$pw",
+}

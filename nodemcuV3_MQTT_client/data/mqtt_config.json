@@ -1,0 +1,6 @@
+{
+  "server":"$mqttserver",
+  "port":"1883",
+  "user":"$user",
+  "pass":"$pw",
+}
